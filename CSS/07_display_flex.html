@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="02_grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+
+    .displaygrid .grid-p{
+        padding: 50px 0px;
+    }
+
+    .displaygrid .GridBox{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+
+    .displaygrid .GridBox .grid-details{
+        padding: 20px;
+        transition: 0.5s all ease-in-out;
+    }
+    
+    .displaygrid .GridBox .grid-details {
+        box-shadow: 0px 0px 5px 0px gray;
+        transform: translateY(-10px);
+    }
+</style>
+</head>
+<body>
+    <section class="displaygrid">
+        
+            <div class="grid-p">
+                <div class="GridBox">
+                    <div class="grid-details">
+                        
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, ipsum a possimus nemo eum omnis doloremque illo pariatur expedita recusandae. Quis aperiam, repellat facilis quas at omnis aliquid! Alias, optio!
+                        </p>
+                    </div>
+                    <div class="grid-details">
+                       
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, ipsum a possimus nemo eum omnis doloremque illo
+                            pariatur expedita recusandae. Quis aperiam, repellat facilis quas at omnis aliquid! Alias, optio!
+                        </p>
+                    </div>
+                    <div class="grid-details">
+                       
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, ipsum a possimus nemo eum omnis doloremque illo
+                            pariatur expedita recusandae. Quis aperiam, repellat facilis quas at omnis aliquid! Alias, optio!
+                        </p>
+                    </div>
+                </div>
+            </div>
+       
+    </section>
+</body>
+</html>
