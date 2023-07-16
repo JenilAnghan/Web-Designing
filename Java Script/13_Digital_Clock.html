@@ -44,8 +44,6 @@
       setInterval(function () {
         
 let dt=document.querySelector(".settime")
-// dt=dt.getHours();
-
 
 let time= new Date();
 let hr= time.getHours();
@@ -77,7 +75,7 @@ if(hr<10){
 }
 
 dt.textContent= hr + ':'+ min + ':' + sec +' '+ day ;
-// document.querySelector('.settime').innerHTML=dt
+
     })
      
     </script>
