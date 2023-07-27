@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: 50px 400px;
+        }
+       .row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+       }
+       .class{
+        height: 400px;
+        width: 400px;
+        border: 2px solid black;
+        padding: 20px;
+       }
+       h5{
+        text-align: center;
+        font-size: 17px;
+       }
+       button{
+        height: 30px;
+        width: 35px;
+        font-size: 20px;
+        text-align: center;
+        transition: 0.5s ease-in-out;
+       }
+
+       button:hover{
+        background-color: black;
+        color: white;
+       }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="class">
+
+                <h5>Maths Operations</h5>
+                <div class="row">
+                    <div class="col">
+                        <label for="">Enter 1st number</label>
+                    </div>
+
+                    <div class="col">
+                        <input type="text" id="num"><br><br>
+                    </div>
+
+                </div>    
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="">Enter 2nd number</label>
+                        </div>
+
+                        <div class="col">
+                            <input type="text" id="nume"><br><br>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="btn">
+                                <button onclick="return Addition()">+</button>
+                                <button onclick="return substraction()">-</button>
+                                <button onclick="return multiplication()">*</button><br><br>
+                                <button onclick="return division()">/</button>
+                                <button onclick="return module()">%</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                           <h5>Answer: <span id="aus"></span></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function Addition(){
+           let num=document.getElementById("num").value
+           let nume=document.getElementById("nume").value
+            let add=""
+          
+            add += parseInt(num)+ parseInt(nume);
+            document.getElementById("aus").innerHTML=add
+            return false
+
+        }
+        function substraction(){
+           let num=document.getElementById("num").value
+           let nume=document.getElementById("nume").value
+            let sub=""
+          
+            sub = (num-nume);
+            document.getElementById("aus").innerHTML=sub
+            return false
+
+        }
+        function multiplication(){
+           let num=document.getElementById("num").value
+           let nume=document.getElementById("nume").value
+            let multi=""
+          
+            multi = (num*nume);
+            document.getElementById("aus").innerHTML=multi
+            return false
+
+        }
+        function division(){
+           let num=document.getElementById("num").value
+           let nume=document.getElementById("nume").value
+            let div=""
+          
+            div = (num/nume);
+            document.getElementById("aus").innerHTML=Math.round (div,2)+" %"
+            return false
+
+        }
+        function module(){
+           let num=document.getElementById("num").value
+           let nume=document.getElementById("nume").value
+            let modu=""
+          
+            modu = (num%nume);
+            document.getElementById("aus").innerHTML=modu
+            return false
+
+        }
+    </script>
+</body>
+</html>
