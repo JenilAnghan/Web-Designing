@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: teal;
+        color: white;
+        font-size: 75px;
+        place-content: center;
+      }
+      .counts {
+        height: 200px;
+        width: 220px;
+        background-color: teal;
+        color: white;
+        font-size: 75px;
+        display: grid;
+        place-content: center;
+      }
+      .counts1 {
+        height: 200px;
+        width: 220px;
+        background-color: teal;
+        color: white;
+        font-size: 75px;
+        display: grid;
+        place-content: center;
+      }
+
+      .counts2 {
+        height: 200px;
+        width: 220px;
+        background-color: teal;
+        color: white;
+        font-size: 75px;
+        display: grid;
+        place-content: center;
+      }
+      .counts3 {
+        height: 200px;
+        width: 220px;
+        background-color: teal;
+        color: white;
+        font-size: 75px;
+        display: grid;
+        place-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="counts" id="countNum"></div>
+      <div class="counts1" id="countNum1"></div>
+      <div class="counts2" id="countNum2"></div>
+      <div class="counts3" id="countNum3"></div>
+    </div>
+
+    <script>
+      let contUpdate = setInterval(counting, 120);
+      let start_num = 100;
+      function counting() {
+        let div = document.getElementById("countNum");
+        div.innerText = ++start_num;
+        if (start_num == 910) {
+          clearInterval(countUpdate);
+        }
+      }
+
+      let contUpdate1 = setInterval(counting1, 120);
+      let start_num1 = 100;
+      function counting1() {
+        let div = document.getElementById("countNum1");
+        div.innerText = ++start_num1;
+        if (start_num1 == 1399) {
+          clearInterval(countUpdate);
+        }
+      }
+
+      let contUpdate2 = setInterval(counting2, 120);
+      let start_num2 = 100;
+      function counting2() {
+        let div = document.getElementById("countNum2");
+        div.innerText = ++start_num2;
+        if (start_num2 == 1777) {
+          clearInterval(countUpdate);
+        }
+      }
+
+      let contUpdate3 = setInterval(counting3, 120);
+      let start_num3 = 100;
+      function counting3() {
+        let div = document.getElementById("countNum3");
+        div.innerText = ++start_num3;
+        if (start_num3 == 1777) {
+          clearInterval(countUpdate);
+        }
+      }
+    </script>
+  </body>
+</html>
