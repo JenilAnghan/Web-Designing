@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        margin: 50px 350px;
+      }
+
+      .marksheet {
+        height: 550px;
+        width: 550px;
+        border: 2px solid black;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      h6 {
+        text-align: center;
+        font-weight: 500;
+        font-size: 17px;
+      }
+
+      .marksheet button {
+        height: 30px;
+        width: 100px;
+      }
+
+      .row1 {
+        padding: 20px 0px;
+        text-align: center;
+        font-size: 17px;
+        font-weight: 600;
+      }
+
+      p {
+        color: red;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="home">
+      <div class="container">
+        <div class="marksheet">
+          <h1>Marksheet For Information Technology</h1>
+          <h6>Enter Marks</h6>
+
+          <div class="row">
+            <div class="col">
+              <label for="">1.C Language</label>
+            </div>
+
+            <div class="col">
+              <input type="text" name="" id="num1" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="">2.C++ Language</label>
+            </div>
+
+            <div class="col">
+              <input type="text" name="" id="num2" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="">3.DataBase</label>
+            </div>
+
+            <div class="col">
+              <input type="text" name="" id="num3" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="">4.HTML</label>
+            </div>
+
+            <div class="col">
+              <input type="text" name="" id="num4" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="">5.CSS</label>
+            </div>
+
+            <div class="col">
+              <input type="text" name="" id="num5" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="">6.Php</label>
+            </div>
+
+            <div class="col">
+              <input type="text" name="" id="num6" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="">7.Core Java</label>
+            </div>
+
+            <div class="col">
+              <input type="text" name="" id="num7" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for=""></label>
+            </div>
+
+            <div class="col">
+              <button onclick="return totalMarks()">Result</button>
+            </div>
+          </div>
+
+          <div class="row1">
+            <div class="col">Total Is : <span id="totalnu"></span></div>
+
+            <div class="col">percentage : <span id="percentage"></span></div>
+          </div>
+
+          <p id="msg"><span id="percentage"></span></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function totalMarks() {
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        let num3 = document.getElementById("num3").value;
+        let num4 = document.getElementById("num4").value;
+        let num5 = document.getElementById("num5").value;
+        let num6 = document.getElementById("num6").value;
+        let num7 = document.getElementById("num6").value;
+
+        var total =
+          parseInt(num1) +
+          parseInt(num2) +
+          parseInt(num4) +
+          parseInt(num5) +
+          parseInt(num6) +
+          parseInt(num7);
+        document.getElementById("totalnu").innerHTML = total + "/350";
+        var avg = (total * 100) / 350;
+
+        document.getElementById("percentage").innerHTML =
+          Math.round(avg, 2) + " %";
+        if (
+          num1 == "" ||
+          num2 == "" ||
+          num3 == "" ||
+          num4 == "" ||
+          num5 == "" ||
+          num6 == "" ||
+          num7 == ""
+        ) {
+          document.getElementById("msg").innerText = "Enter All Marks";
+          return false;
+        } else if (
+          num1 > 50 ||
+          num2 > 50 ||
+          num3 > 50 ||
+          num4 > 50 ||
+          num5 > 50 ||
+          num6 > 50 ||
+          nu7 > 50
+        ) {
+          document.getElementById("msg").innerText =
+            "Each Subject Max Marks Are 50 Only";
+          return false;
+        } else {
+          document.getElementById("msg").innerText = "";
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
