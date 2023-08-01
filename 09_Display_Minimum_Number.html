@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .mydiv {
+        margin: 100px 400px;
+      }
+      .contact {
+        border: 2px solid black;
+        width: 400px;
+        height: 300px;
+        padding: 20px;
+      }
+      p {
+        font-size: 17px;
+        color: green;
+        text-transform: capitalize;
+      }
+      .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mydiv">
+      <div class="contact">
+        <h2>
+          Enter any two number to display which number is minimum from them
+        </h2>
+        <form action="#">
+          <div class="row">
+            <div class="col">
+              <label for="">1st Number</label>
+            </div>
+            <div class="col">
+              <input type="text" id="fnum" onkeyup="return checkNumber()" />
+              <br /><br />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <label for="">2nd Number</label>
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                id="snum"
+                onkeyup="return checkNumber()"
+              /><br /><br />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col"></div>
+            <div class="col">
+              <button onclick="return checkminimum()">Display</button><br />
+            </div>
+          </div>
+
+          <p id="msg"></p>
+          <p id="msg1"></p>
+        </form>
+        <script>
+          function checkminimum() {
+            debugger;
+            let fnum = document.getElementById("fnum").value;
+            let snum = document.getElementById("snum").value;
+            if (fnum == "" || snum == "") {
+              document.getElementById("msg").innerText =
+                snum + " Enter Your value";
+              return false;
+            } else if (fnum >= snum) {
+              document.getElementById("msg").innerText = snum + " is minimum";
+              return false;
+            } else if (fnum <= snum) {
+              document.getElementById("msg").innerText = fnum + " is minimum";
+              return false;
+            } else if (fnum == snum) {
+              document.getElementById("msg").innerText = "both are equal";
+              return false;
+            } else {
+              document.getElementById("msg").innerText = "invalid";
+              return false;
+            }
+          }
+
+          function checkNumber() {
+            let fnum = document.getElementById("fnum").value;
+            let snum = document.getElementById("snum").value;
+            let rexp = /^[0-9]*$/;
+            if (!rexp.test(fnum) && rexp.test(snum)) {
+              document.getElementById("msg").innerText = "Please Enter Number";
+              return false;
+            } else {
+              document.getElementById("msg").innerText = "";
+              return false;
+            }
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
